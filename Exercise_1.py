@@ -26,20 +26,31 @@ def digitCheck():
 def newList(length):
     length = int(length)
     lis = []
-    while length > 0:
-        lis.append(randint(0, 10))
-        length -= 1
-    return lis
+    if length > 0:
+        while length > 0:
+            lis.append(randint(0, 10))
+            length -= 1
+        return lis
+    else:
+        while length < 0:
+            lis.append(randint(0, 10))
+            length += 1
+        return lis
 
 def sumNumbers(length, lis):
-    print("lis ", lis)
     i = 0
     sum = 0
-    while i < length:
-        sum += lis[i]
-        i += 2
-        print('Sum =',sum)
-    return sum
+    if length > 0:
+        while i < length:
+            sum += lis[i]
+            i += 2
+        return sum
+    else:
+        length = abs(length)
+        while i < length:
+            sum += lis[i]
+            i += 2
+        return sum
 
 def Main():
     digit = digitCheck()
@@ -48,3 +59,5 @@ def Main():
     print(f'Сумма чисел на нечётных позициях: {sumNumbers(digit, newNumbers)}')
 
 Main()
+
+
