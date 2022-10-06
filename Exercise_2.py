@@ -20,7 +20,7 @@ def numberCheck():
         length = int(input('Введите число: '))
         print(f'Ваше число: ' + str(length))
     except ValueError:
-        print('Нужно ввести число: ')
+        print('Нужно ввести число.')
         numberCheck()
     return length
 

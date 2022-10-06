@@ -15,7 +15,7 @@ def numberCheck():
         number = int(input('Введите неотрицательное число: '))
         print(f'Ваше число: '+ str(number))
     except ValueError:
-        print('Нужно ввести число: ')
+        print('Нужно ввести число.')
         numberCheck()
     return number
 

@@ -19,7 +19,7 @@ def digitCheck():
         length = int(input('Введите число: '))
         print(f'Ваше число: ' + str(length))
     except ValueError:
-        print('Нужно ввести число: ')
+        print('Нужно ввести число.')
         digitCheck()
     return length
 
