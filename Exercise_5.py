@@ -33,7 +33,6 @@ def newList(data):
     data.insert(0, 0)
     length = len(data) - 1
     newData = []
-    i = 8
     while length > 0:
         newData.append(-data[length])
         length -= 1
